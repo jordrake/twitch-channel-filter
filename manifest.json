@@ -1,0 +1,17 @@
+{
+  "name": "Twitch Channel Filter",
+  "version": "1.0",
+  "description": "Filter channels from the Twitch directory",
+  "manifest_version": 2,
+  "permissions": ["storage"],
+  "browser_action": {
+    "default_popup": "options.html"
+  },
+  "content_scripts": [
+    {
+      "run_at": "document_start",
+      "matches": ["https://www.twitch.tv/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
